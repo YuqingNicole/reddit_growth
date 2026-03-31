@@ -26,10 +26,6 @@ export default function CtaSection() {
           <span className="contact-label">{t(lang, '邮箱', 'Email')}</span>
           <a href="mailto:yuqingchen02@gmail.com">yuqingchen02@gmail.com</a>
         </div>
-        <div className="contact-item">
-          <span className="contact-label">{t(lang, '微信', 'WeChat')}</span>
-          <span>c1426217526</span>
-        </div>
       </div>
     </section>
   )
