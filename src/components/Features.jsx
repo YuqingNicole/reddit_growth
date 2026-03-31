@@ -17,8 +17,8 @@ export default function Features() {
       <div className="features-header">
         <h2>{t(lang, 'OpenClaw 驱动，专为 Reddit 增长打造。', 'Powered by OpenClaw. Built for Reddit growth.')}</h2>
         <p>{t(lang,
-          'AI Agent 自主执行，将数小时的调研与操作压缩到几分钟 — 全天候为你的品牌工作。',
-          'Autonomous AI agents compress hours of research and action into minutes — working for your brand 24/7.'
+          'OpenClaw Agent 自主执行，将数小时的调研与操作压缩到几分钟 — 全天候为你的品牌工作。',
+          'OpenClaw agents compress hours of research and action into minutes — working for your brand 24/7.'
         )}</p>
       </div>
 
