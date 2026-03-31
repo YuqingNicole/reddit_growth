@@ -1,4 +1,4 @@
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
 
@@ -25,6 +25,6 @@ module.exports = async function handler(req, res) {
 
     return res.status(200).json({ count })
   } catch (error) {
-    return res.status(500).json({ error: 'Failed to fetch count', detail: error.message })
+    return res.status(500).json({ error: 'Failed to fetch count', detail: String(error) })
   }
 }
