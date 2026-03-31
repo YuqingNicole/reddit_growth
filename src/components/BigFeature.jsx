@@ -23,8 +23,8 @@ export default function BigFeature() {
           <h3 className="bf-title">{t(lang, <>发帖之前，<br />先摸透每个社区。</>, <>Know every community<br />before you post.</>)}</h3>
           <p className="bf-desc">
             {t(lang,
-              '我们的引擎持续索引 14,000+ 活跃子版块，让你在动笔之前就掌握完整画像 — 从发帖规律到版主行为，一览无余。',
-              'Our engine indexes 14,000+ active subreddits continuously. Get a complete picture of any community — from posting patterns to mod behavior — before you write a single word.'
+              'OpenClaw AI Agent 持续索引 14,000+ 活跃子版块，让你在动笔之前就掌握完整画像 — 从发帖规律到版主行为，一览无余。',
+              'OpenClaw AI agents continuously index 14,000+ active subreddits. Get a complete picture of any community — from posting patterns to mod behavior — before you write a single word.'
             )}
           </p>
           <ul className="bf-list">

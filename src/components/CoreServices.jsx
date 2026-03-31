@@ -17,10 +17,10 @@ export default function CoreServices() {
     <section className="core-services" id="services">
       <div className="cs-header">
         <div className="cs-overline">{t(lang, '核心服务能力', 'Core Services')}</div>
-        <h2>{t(lang, <>从养号到增长，<br />全链路 Reddit 运营服务。</>, <>From account building to growth,<br />full-stack Reddit operations.</>)}</h2>
+        <h2>{t(lang, <>从养号到增长，<br />OpenClaw AI 全链路执行。</>, <>From account building to growth,<br />OpenClaw AI handles the execution.</>)}</h2>
         <p>{t(lang,
-          '七大模块覆盖 Reddit 增长全流程，让每一步都有据可依。',
-          'Seven modules covering the entire Reddit growth pipeline, every step backed by data.'
+          '基于 OpenClaw 自主 Agent 驱动的七大服务模块，AI 代替人工执行真实操作，全天候运转。',
+          'Seven service modules powered by OpenClaw autonomous agents. AI takes real action on your behalf, running 24/7.'
         )}</p>
       </div>
 

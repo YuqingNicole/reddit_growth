@@ -15,10 +15,10 @@ export default function Features() {
   return (
     <section className="features" id="features">
       <div className="features-header">
-        <h2>{t(lang, '专为 Reddit 增长打造。', 'Built for serious Reddit growth.')}</h2>
+        <h2>{t(lang, 'OpenClaw 驱动，专为 Reddit 增长打造。', 'Powered by OpenClaw. Built for Reddit growth.')}</h2>
         <p>{t(lang,
-          '洞察社区、精准发帖、衡量关键指标 — 你需要的所有工具，都在这里。',
-          'Every tool you need to understand communities, time your posts, and measure what matters.'
+          'AI Agent 自主执行，将数小时的调研与操作压缩到几分钟 — 全天候为你的品牌工作。',
+          'Autonomous AI agents compress hours of research and action into minutes — working for your brand 24/7.'
         )}</p>
       </div>
 

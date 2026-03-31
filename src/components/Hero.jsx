@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <div className="hero-badge">{t(lang, '公测开放中', 'Now in Public Beta')}</div>
-        <h1>{t(lang, '你的 Reddit 用户正在等你。', 'Your Reddit audience is waiting.')}</h1>
+        <div className="hero-badge">{t(lang, 'Powered by OpenClaw AI', 'Powered by OpenClaw AI')}</div>
+        <h1>{t(lang, 'AI 驱动的 Reddit 增长引擎。', 'AI-Powered Reddit Growth Engine.')}</h1>
         <p className="hero-sub">
           {t(lang,
-            'Upvote 为营销人和创始人提供数据分析、智能排期和社区洞察，让你在 Reddit 上实现增长 — 告别盲目发帖。',
-            'Upvote gives marketers and founders the analytics, scheduling, and community intelligence to grow on Reddit — without the guesswork.'
+            '基于 OpenClaw 自主 AI Agent，为你的品牌在 Reddit 上执行真实操作 — 智能排期、社区洞察、内容优化，全天候自动运转，不只是建议，而是行动。',
+            'Built on OpenClaw autonomous AI agents that take real action on your behalf — smart scheduling, community intelligence, and content optimization running 24/7. Not just suggestions, but execution.'
           )}
         </p>
         <div className="hero-actions">
