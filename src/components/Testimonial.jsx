@@ -15,7 +15,7 @@ export default function Testimonial() {
         <div className="ta-avatar">NC</div>
         <div className="ta-info">
           <div className="ta-name">Nicole</div>
-          <div className="ta-role">CEO, Stackblitz</div>
+          <div className="ta-role">CEO, Upvote</div>
         </div>
       </div>
     </section>
