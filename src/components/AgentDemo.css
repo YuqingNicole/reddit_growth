@@ -1,0 +1,144 @@
+.agent-demo {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 64px;
+  border-top: 1px solid var(--border);
+}
+
+.demo-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px;
+}
+
+.demo-overline {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.demo-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.demo-header p {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.demo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.demo-card-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.demo-chat {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+/* Chat bubble */
+.chat-bubble {
+  background: #E8F5E9;
+  border-radius: 12px 12px 12px 4px;
+  padding: 14px 18px;
+  position: relative;
+  max-width: 95%;
+}
+
+.chat-bubble.highlight {
+  background: #C8E6C9;
+}
+
+.chat-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #1A1714;
+  white-space: pre-line;
+}
+
+.chat-time {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-top: 6px;
+}
+
+/* Comment block */
+.chat-comment {
+  margin-left: 8px;
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+}
+
+.chat-comment-post {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.chat-comment-text {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.6;
+  position: relative;
+}
+
+.chat-quote-mark {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 800;
+  font-style: normal;
+  margin-right: 4px;
+  line-height: 1;
+  vertical-align: text-top;
+}
+
+/* Scrollbar */
+.demo-chat::-webkit-scrollbar {
+  width: 4px;
+}
+.demo-chat::-webkit-scrollbar-track {
+  background: transparent;
+}
+.demo-chat::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .agent-demo { padding: 80px 20px; }
+  .demo-grid { grid-template-columns: 1fr; }
+  .demo-chat { max-height: 400px; }
+}
