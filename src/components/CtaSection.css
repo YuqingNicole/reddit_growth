@@ -75,8 +75,38 @@
   line-height: 1.5;
 }
 
+.cta-form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  max-width: 520px;
+  margin: 0 auto 0;
+}
+
+.cta-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--card);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cta-input::placeholder { color: #aaa; }
+.cta-input:focus { border-color: var(--accent); }
+
+.cta-form .btn-accent {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .final-cta { padding: 60px 20px; }
   .final-cta h2 { font-size: 32px; }
   .contact-info { flex-direction: column; gap: 20px; align-items: center; }
+  .cta-form { flex-direction: column; }
 }
