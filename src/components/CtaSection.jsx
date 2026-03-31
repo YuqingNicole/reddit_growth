@@ -1,8 +1,34 @@
+import { useState } from 'react'
 import { useLang, t } from '../i18n'
 import './CtaSection.css'
 
 export default function CtaSection() {
   const { lang } = useLang()
+  const [status, setStatus] = useState('idle')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const email = e.target.email.value
+    if (!email) return
+
+    setStatus('loading')
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (res.ok) {
+        setStatus('success')
+        e.target.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section className="final-cta">
       <h2>{t(lang, '今天就开始在 Reddit 增长。', 'Start growing on Reddit today.')}</h2>
@@ -17,10 +43,32 @@ export default function CtaSection() {
           'Join now as an early seed user and get free access to all upcoming features — limited spots, first come first served.'
         )}</p>
       </div>
-      <form className="cta-form" onSubmit={(e) => { e.preventDefault(); const email = e.target.email.value; if (email) window.location.href = `mailto:yuqingchen02@gmail.com?subject=${encodeURIComponent('申请种子用户席位')}&body=${encodeURIComponent(`Hi Nicole，\n\n我希望申请早期种子用户席位。\n\n我的邮箱：${email}\n\n期待你的回复！`)}` }}>
-        <input type="email" name="email" className="cta-input" placeholder={t(lang, '输入你的邮箱', 'Enter your email')} required />
-        <button type="submit" className="btn-accent">{t(lang, '锁定种子席位', 'Claim Seed Spot')}</button>
-      </form>
+
+      {status === 'success' ? (
+        <div className="cta-success">
+          {t(lang,
+            '🎉 提交成功！我们会尽快联系你。',
+            '🎉 Submitted! We\'ll reach out to you soon.'
+          )}
+        </div>
+      ) : (
+        <form className="cta-form" onSubmit={handleSubmit}>
+          <input type="email" name="email" className="cta-input" placeholder={t(lang, '输入你的邮箱', 'Enter your email')} required />
+          <button type="submit" className="btn-accent" disabled={status === 'loading'}>
+            {status === 'loading'
+              ? t(lang, '提交中...', 'Submitting...')
+              : t(lang, '锁定种子席位', 'Claim Seed Spot')
+            }
+          </button>
+        </form>
+      )}
+
+      {status === 'error' && (
+        <div className="cta-error">
+          {t(lang, '提交失败，请稍后重试或直接邮件联系我们。', 'Submission failed. Please try again or email us directly.')}
+        </div>
+      )}
+
       <div className="contact-info">
         <div className="contact-item">
           <span className="contact-label">{t(lang, '邮箱', 'Email')}</span>
