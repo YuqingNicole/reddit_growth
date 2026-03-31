@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Logos from './components/Logos'
 import Features from './components/Features'
 import BigFeature from './components/BigFeature'
+import CoreServices from './components/CoreServices'
 import Testimonial from './components/Testimonial'
 import Pricing from './components/Pricing'
 import CtaSection from './components/CtaSection'
@@ -17,6 +18,7 @@ function App() {
       <Logos />
       <Features />
       <BigFeature />
+      <CoreServices />
       <Testimonial />
       <Pricing />
       <CtaSection />
