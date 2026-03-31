@@ -1,0 +1,35 @@
+.logos-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px 80px;
+  text-align: center;
+}
+
+.logos-label {
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  align-items: center;
+  opacity: 0.35;
+}
+
+.logos-row span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+  .logos-section { padding: 0 20px 60px; }
+  .logos-row { flex-wrap: wrap; gap: 24px; }
+}

@@ -1,0 +1,26 @@
+.final-cta {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: 100px 64px;
+}
+
+.final-cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+
+.final-cta p {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 768px) {
+  .final-cta { padding: 60px 20px; }
+  .final-cta h2 { font-size: 32px; }
+}
