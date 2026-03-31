@@ -17,7 +17,7 @@ export default function Navbar() {
         <button className="btn-lang" onClick={toggle}>
           {lang === 'zh' ? 'EN' : '中文'}
         </button>
-        <a href="mailto:yuqingchen02@gmail.com" className="btn-fill">{t(lang, '免费开始', 'Get Started')}</a>
+        <a href="#cta" className="btn-fill">{t(lang, '免费开始', 'Get Started')}</a>
       </div>
     </nav>
   )

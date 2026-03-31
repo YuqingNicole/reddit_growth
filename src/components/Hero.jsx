@@ -15,7 +15,7 @@ export default function Hero() {
           )}
         </p>
         <div className="hero-actions">
-          <a href="mailto:yuqingchen02@gmail.com" className="btn-accent">{t(lang, '免费开始', 'Start for Free')}</a>
+          <a href="#cta" className="btn-accent">{t(lang, '免费开始', 'Start for Free')}</a>
           <button className="btn-ghost">{t(lang, '了解工作原理', 'See How It Works')}</button>
         </div>
       </div>

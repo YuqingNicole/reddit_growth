@@ -30,7 +30,7 @@ export default function CtaSection() {
   }
 
   return (
-    <section className="final-cta">
+    <section className="final-cta" id="cta">
       <h2>{t(lang, '今天就开始在 Reddit 增长。', 'Start growing on Reddit today.')}</h2>
       <p>{t(lang,
         '试用月度定金 $200 起，无隐藏费用，2 分钟内完成设置。',
