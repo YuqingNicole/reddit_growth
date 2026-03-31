@@ -10,7 +10,7 @@ export default function CtaSection() {
         '试用月度定金 $200 起，无隐藏费用，2 分钟内完成设置。',
         'Trial monthly deposit from $200. No hidden fees. Set up in under 2 minutes.'
       )}</p>
-      <button className="btn-accent">{t(lang, '立即咨询', 'Get in Touch')}</button>
+      <a href="mailto:yuqingchen02@gmail.com" className="btn-accent">{t(lang, '立即咨询', 'Get in Touch')}</a>
       <div className="contact-info">
         <div className="contact-item">
           <span className="contact-label">{t(lang, '邮箱', 'Email')}</span>

@@ -21,6 +21,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; display: inline-block; }
 button { cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; }
 ul { list-style: none; }
