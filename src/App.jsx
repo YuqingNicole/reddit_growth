@@ -6,7 +6,6 @@ import Features from './components/Features'
 import BigFeature from './components/BigFeature'
 import CoreServices from './components/CoreServices'
 import Testimonial from './components/Testimonial'
-import Pricing from './components/Pricing'
 import CtaSection from './components/CtaSection'
 import Footer from './components/Footer'
 
@@ -20,7 +19,6 @@ function App() {
       <BigFeature />
       <CoreServices />
       <Testimonial />
-      <Pricing />
       <CtaSection />
       <Footer />
     </>

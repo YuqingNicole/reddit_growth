@@ -1,18 +1,23 @@
+import { useLang, t } from '../i18n'
 import './Navbar.css'
 
 export default function Navbar() {
+  const { lang, toggle } = useLang()
   return (
     <nav className="navbar">
       <div className="logo">upvote<span>.</span></div>
       <div className="nav-center">
-        <a href="#features">功能</a>
-        <a href="#pricing">定价</a>
-        <a href="#">博客</a>
-        <a href="#">更新日志</a>
+        <a href="#features">{t(lang, '功能', 'Features')}</a>
+        <a href="#services">{t(lang, '服务', 'Services')}</a>
+        <a href="#">{t(lang, '博客', 'Blog')}</a>
+        <a href="#">{t(lang, '更新日志', 'Changelog')}</a>
       </div>
       <div className="nav-right">
+        <button className="btn-lang" onClick={toggle}>
+          {lang === 'zh' ? 'EN' : '中文'}
+        </button>
         <button className="btn-text">Demo</button>
-        <button className="btn-fill">免费开始</button>
+        <button className="btn-fill">{t(lang, '免费开始', 'Get Started')}</button>
       </div>
     </nav>
   )

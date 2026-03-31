@@ -70,15 +70,6 @@
   margin-bottom: 10px;
 }
 
-.cs-title-en {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--muted);
-  margin-top: 2px;
-  letter-spacing: 0;
-}
-
 .cs-desc {
   font-size: 14px;
   color: var(--muted);
