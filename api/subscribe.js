@@ -1,9 +1,9 @@
-import { Client } from '@notionhq/client'
+const { Client } = require('@notionhq/client')
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY })
 const DATABASE_ID = process.env.NOTION_DATABASE_ID
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -26,6 +26,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true })
   } catch (error) {
     console.error('Notion API error:', error)
-    return res.status(500).json({ error: 'Failed to save' })
+    return res.status(500).json({ error: 'Failed to save', detail: error.message })
   }
 }
