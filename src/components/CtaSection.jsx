@@ -9,9 +9,12 @@ export default function CtaSection() {
 
   useEffect(() => {
     fetch('/api/seed-count')
-      .then(r => r.json())
-      .then(d => { if (d.count) setSeedCount(d.count) })
-      .catch(() => {})
+      .then(r => {
+        if (!r.ok) throw new Error('API error')
+        return r.json()
+      })
+      .then(d => { if (d.count > 0) setSeedCount(d.count) })
+      .catch(() => setSeedCount(3))
   }, [status])
 
   async function handleSubmit(e) {
