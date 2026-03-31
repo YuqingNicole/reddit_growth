@@ -1,8 +1,3 @@
-const { Client } = require('@notionhq/client')
-
-const notion = new Client({ auth: process.env.NOTION_API_KEY })
-const DATABASE_ID = process.env.NOTION_DATABASE_ID
-
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
@@ -11,18 +6,25 @@ module.exports = async function handler(req, res) {
     let count = 0
     let cursor = undefined
     do {
-      const page = await notion.databases.query({
-        database_id: DATABASE_ID,
-        start_cursor: cursor,
-        page_size: 100,
+      const body = { page_size: 100 }
+      if (cursor) body.start_cursor = cursor
+
+      const response = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${process.env.NOTION_API_KEY}`,
+          'Notion-Version': '2022-06-28',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
       })
-      count += page.results.length
-      cursor = page.has_more ? page.next_cursor : undefined
+      const data = await response.json()
+      count += data.results.length
+      cursor = data.has_more ? data.next_cursor : undefined
     } while (cursor)
 
     return res.status(200).json({ count })
   } catch (error) {
-    console.error('Notion API error:', error)
     return res.status(500).json({ error: 'Failed to fetch count', detail: error.message })
   }
 }
