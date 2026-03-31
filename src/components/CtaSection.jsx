@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLang, t } from '../i18n'
 import './CtaSection.css'
 
 export default function CtaSection() {
   const { lang } = useLang()
   const [status, setStatus] = useState('idle')
+  const [seedCount, setSeedCount] = useState(0)
+
+  useEffect(() => {
+    fetch('/api/seed-count')
+      .then(r => r.json())
+      .then(d => { if (d.count) setSeedCount(d.count) })
+      .catch(() => {})
+  }, [status])
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -66,6 +74,16 @@ export default function CtaSection() {
       {status === 'error' && (
         <div className="cta-error">
           {t(lang, '提交失败，请稍后重试或直接邮件联系我们。', 'Submission failed. Please try again or email us directly.')}
+        </div>
+      )}
+
+      {seedCount > 0 && (
+        <div className="seed-counter">
+          <span className="seed-counter-dot"></span>
+          {t(lang,
+            `已有 ${seedCount} 人加入成为种子用户`,
+            `${seedCount} people have joined as seed users`
+          )}
         </div>
       )}
 
