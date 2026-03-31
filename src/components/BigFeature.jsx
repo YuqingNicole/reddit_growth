@@ -19,11 +19,11 @@ export default function BigFeature() {
     <section className="big-feature">
       <div className="big-feature-inner">
         <div>
-          <div className="bf-overline">{t(lang, '子版块情报', 'Subreddit Intelligence')}</div>
+          <div className="bf-overline">{t(lang, 'Subreddit情报', 'Subreddit Intelligence')}</div>
           <h3 className="bf-title">{t(lang, <>发帖之前，<br />先摸透每个社区。</>, <>Know every community<br />before you post.</>)}</h3>
           <p className="bf-desc">
             {t(lang,
-              'OpenClaw Agent 持续索引 14,000+ 活跃子版块，让你在动笔之前就掌握完整画像 — 从发帖规律到版主行为，一览无余。',
+              'OpenClaw Agent 持续索引 14,000+ 活跃Subreddit，让你在动笔之前就掌握完整画像 — 从发帖规律到版主行为，一览无余。',
               'OpenClaw agents continuously index 14,000+ active subreddits. Get a complete picture of any community — from posting patterns to mod behavior — before you write a single word.'
             )}
           </p>

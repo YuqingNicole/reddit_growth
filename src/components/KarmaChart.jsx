@@ -57,7 +57,7 @@ export default function KarmaChart() {
           <p className="karma-subtitle">{t(lang, '仅用 48 小时。', 'In just 48 hours.')}</p>
           <p className="karma-desc">
             {t(lang,
-              '通过 OpenClaw Agent 执行精准的社区互动策略，在目标子版块持续产出高价值评论与帖子，实现 Karma 指数级增长。',
+              '通过 OpenClaw Agent 执行精准的社区互动策略，在目标Subreddit持续产出高价值评论与帖子，实现 Karma 指数级增长。',
               'OpenClaw agents executed precise community engagement strategies — high-value comments and posts in target subreddits — driving exponential Karma growth.'
             )}
           </p>
