@@ -1,3 +1,52 @@
+/* Stats Grid */
+.sg-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sg-stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.sg-stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+/* AI Benefits */
+.sg-ai-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sg-ai-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.sg-ai-item strong {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.sg-ai-item p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
 /* Features Grid */
 .sg-features {
   display: grid;
@@ -124,17 +173,61 @@
   line-height: 1.8;
 }
 
-/* Quote */
+/* Guarantees */
+.sg-guarantees {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sg-guarantee-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sg-guarantee-item strong {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.sg-guarantee-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Testimonials */
+.sg-testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .sg-quote {
   background: var(--card);
   border-left: 4px solid var(--accent);
   border-radius: 0 10px 10px 0;
   padding: 20px 24px;
+  margin: 0;
+}
+
+.sg-quote p {
   font-size: 15px;
   color: var(--muted);
   line-height: 1.8;
   font-style: italic;
-  margin: 16px 0;
+  margin-bottom: 8px;
+}
+
+.sg-quote cite {
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  color: inherit;
 }
 
 /* Pricing */
@@ -149,7 +242,7 @@
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 24px;
+  padding: 28px 24px;
   text-align: center;
 }
 
@@ -171,7 +264,7 @@
   font-family: 'Syne', sans-serif;
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .sg-pricing-amount span {
@@ -180,15 +273,40 @@
   color: var(--muted);
 }
 
-.sg-pricing-card p {
+.sg-pricing-card h4 {
   font-size: 14px;
-  margin-bottom: 4px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.sg-pricing-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.sg-pricing-features li {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 2;
+  padding-left: 20px;
+  position: relative;
+}
+
+.sg-pricing-features li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .sg-pricing-note {
   font-size: 12px !important;
   color: var(--accent) !important;
   font-weight: 600;
+  margin-top: 12px !important;
 }
 
 .sg-pricing-future {
@@ -243,8 +361,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .sg-stats-grid,
+  .sg-ai-benefits,
   .sg-features,
-  .sg-workflow-grid {
+  .sg-workflow-grid,
+  .sg-guarantees {
     grid-template-columns: 1fr;
   }
 

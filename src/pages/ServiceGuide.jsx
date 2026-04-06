@@ -17,7 +17,7 @@ const executionModules = [
   {
     zh: '评论互动策略与内容优化',
     en: 'Comment Engagement Strategy & Optimization',
-    descZh: '锚定目标人群，优化评论思路和切入角度。通过配置评论 Skill 实现 100% 自动化筛选 Post + 发布推广评论',
+    descZh: '锚定目标人群，优化评论思路和切入角度。通过配置评论 Skill 实现 100% 自动化筛选 Post + 发布推广评���',
     descEn: 'Target the right audience and optimize comment approach and angles. Configure comment Skills for 100% automated Post screening + promotional comment publishing',
   },
   {
@@ -41,7 +41,7 @@ const executionModules = [
   {
     zh: 'Karma 增长服务',
     en: 'Karma Growth Service',
-    descZh: '快速积累账号权威，达到发帖门槛',
+    descZh: '快速积累账号权威，达��发帖门槛',
     descEn: 'Quickly build account authority to reach posting thresholds',
   },
   {
@@ -52,6 +52,13 @@ const executionModules = [
   },
 ]
 
+const redditStats = [
+  { zh: '月访问量 40 亿+，活跃用户 4.3 亿', en: '4B+ monthly visits, 430M active users' },
+  { zh: 'Google 域名权威排名第一，超越 Amazon、YouTube', en: '#1 Google domain authority, outranking Amazon & YouTube' },
+  { zh: 'ChatGPT 引用最多的来源——引用频率是 Twitter 的 6 倍、YouTube 的 10 倍', en: 'Most-cited source for ChatGPT — 6x more than Twitter, 10x more than YouTube' },
+  { zh: '10 万+ 垂直社区，覆盖所有行业赛道', en: '100K+ niche communities covering every industry vertical' },
+]
+
 export default function ServiceGuide() {
   const { lang } = useLang()
   return (
@@ -59,17 +66,61 @@ export default function ServiceGuide() {
       <h1>{t(lang, '服务指南', 'Service Guide')}</h1>
       <p className="page-updated">{t(lang, '全面了解 Upvote.Reddit 的服务内容与工作流程', 'Everything you need to know about Upvote.Reddit services and workflows')}</p>
 
+      {/* Why Reddit */}
+      <section>
+        <h2>{t(lang, '为什么选择 Reddit', 'Why Reddit')}</h2>
+        <p>{t(lang,
+          'Reddit 是全球最大的英文用户讨论社区，也是品牌出海获取真实口碑和 AI 搜索可见度的最佳渠道。',
+          'Reddit is the world\'s largest English-language discussion community and the best channel for brands to gain authentic word-of-mouth and AI search visibility.'
+        )}</p>
+        <div className="sg-stats-grid">
+          {redditStats.map((s, i) => (
+            <div className="sg-stat-card" key={i}>
+              <p>{t(lang, s.zh, s.en)}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* AI Search Value */}
+      <section>
+        <h2>{t(lang, 'AI 搜索价值', 'AI Search Value')}</h2>
+        <p>{t(lang,
+          'Reddit 内容正在成为 AI 搜索引擎的核心引用来源。通过在 Reddit 上建立品牌内容，你的产品将出现在 ChatGPT、Perplexity、Google AI Overview 等 AI 搜索结果中，获得全新的曝光渠道。',
+          'Reddit content is becoming a core citation source for AI search engines. By building brand content on Reddit, your product will appear in AI search results across ChatGPT, Perplexity, Google AI Overview and more — unlocking an entirely new exposure channel.'
+        )}</p>
+        <div className="sg-ai-benefits">
+          <div className="sg-ai-item">
+            <strong>{t(lang, '品牌曝光', 'Brand Exposure')}</strong>
+            <p>{t(lang, '品牌出现在 AI 搜索推荐结果中', 'Your brand surfaces in AI search recommendations')}</p>
+          </div>
+          <div className="sg-ai-item">
+            <strong>{t(lang, 'Google 首页', 'Google Page 1')}</strong>
+            <p>{t(lang, 'Reddit 帖子自带高权重，天然排名优势', 'Reddit posts carry high domain authority with natural ranking advantages')}</p>
+          </div>
+          <div className="sg-ai-item">
+            <strong>{t(lang, '真实口碑', 'Social Proof')}</strong>
+            <p>{t(lang, '真实用户评价和讨论，建立品牌信任', 'Authentic user reviews and discussions that build brand trust')}</p>
+          </div>
+          <div className="sg-ai-item">
+            <strong>{t(lang, '精准引流', 'Direct Traffic')}</strong>
+            <p>{t(lang, 'Reddit 社区直接为官网导流', 'Drive traffic directly from Reddit communities to your website')}</p>
+          </div>
+        </div>
+      </section>
+
       {/* Product Overview */}
       <section>
         <h2>{t(lang, '产品简介', 'Product Overview')}</h2>
         <p>{t(lang,
-          'Upvote Reddit 是一款 AI 驱动的 Reddit 营销增长工具，基于 OpenClaw AI Agent 全自动运行，覆盖从机会发现、内容发布到互动增长的完整链路，帮助品牌在 Reddit 上安全、高效地获取曝光与用户增长。',
+          'Upvote Reddit 是一款 AI 驱动的 Reddit 营销增长工具，基于 OpenClaw AI Agent 全自动运行，覆盖从机会发现、内容发布到互动增长的完整链路，帮助品牌在 Reddit 上安全、高效地获取曝光与用户增长���',
           'Upvote Reddit is an AI-powered Reddit marketing growth tool built on the OpenClaw AI Agent framework. It runs fully automatically, covering the entire pipeline from opportunity discovery and content publishing to engagement growth — helping brands safely and efficiently gain exposure and user growth on Reddit.'
         )}</p>
         <ul>
           <li>{t(lang, '自动发现高价值 Subreddit 和潜在客户', 'Automatically discover high-value Subreddits and potential customers')}</li>
-          <li>{t(lang, '使用 claude-opus-4.6 生成合规内容，规避封号风险', 'Generate compliant content using claude-opus-4.6, minimizing ban risks')}</li>
+          <li>{t(lang, '使用 claude-opus-4.6 生成合���内容，规避封号风险', 'Generate compliant content using claude-opus-4.6, minimizing ban risks')}</li>
           <li>{t(lang, '全流程 AI 自动化，无需人工干预', 'Fully automated AI workflow — no manual intervention required')}</li>
+          <li>{t(lang, '双重优化：同时提升 Google 排名和 AI 搜索引用率', 'Dual optimization: boost both Google rankings and AI search citation rates')}</li>
         </ul>
       </section>
 
@@ -87,21 +138,21 @@ export default function ServiceGuide() {
           <div className="sg-feature">
             <h3>{t(lang, 'Subreddit 发现与分析', 'Subreddit Discovery & Analysis')}</h3>
             <p>{t(lang,
-              '发帖之前，先摸透每个社区。AI 自动评估每个 Subreddit 的营销适配度、用户构成、活跃规律和内容偏好，提供策略建议和切入点推荐。',
+              '发帖之前，先摸透每个社区。AI 自动评估每个 Subreddit 的营销适配度、��户构成、活跃规律和内容偏好，提供策略建议和切入点推荐。',
               'Before posting, get deep insights into each community. AI automatically evaluates each Subreddit\'s marketing fit, user demographics, activity patterns, and content preferences — providing strategic recommendations and entry point suggestions.'
             )}</p>
           </div>
           <div className="sg-feature">
             <h3>{t(lang, '潜在客户追踪', 'Lead Tracking')}</h3>
             <p>{t(lang,
-              '通过关键词和 AI 分析，在帖子和评论中追踪高意向潜在客户，实时通知，精准触达目标用户。',
+              '通过关键词和 AI 分析，在帖子和评论中追踪高意向潜��客户，实时通知，精准触达目标��户。',
               'Through keyword and AI analysis, track high-intent leads in posts and comments with real-time notifications for precise targeting of your ideal users.'
             )}</p>
           </div>
           <div className="sg-feature">
             <h3>{t(lang, 'Karma 增长服务', 'Karma Growth Service')}</h3>
             <p>{t(lang,
-              '从 0 开始帮你的 Reddit 账号积累 Karma 和权威性，快速达到发帖门槛。实测 Karma 从 2 增长到 220+，仅用 48 小时。',
+              '从 0 开始帮你的 Reddit 账号积累 Karma 和权威性，快速达到发帖门槛。���测 Karma �� 2 增长到 220+，仅用 48 小时。',
               'Build your Reddit account\'s Karma and authority from scratch to quickly reach posting thresholds. In practice, Karma grew from 2 to 220+ in just 48 hours.'
             )}</p>
           </div>
@@ -113,16 +164,16 @@ export default function ServiceGuide() {
             )}</p>
           </div>
           <div className="sg-feature">
-            <h3>{t(lang, '竞品监控', 'Competitor Monitoring')}</h3>
+            <h3>{t(lang, '���品监控', 'Competitor Monitoring')}</h3>
             <p>{t(lang,
-              '追踪竞品在 Reddit 上的动态和策略，发现增长机会。',
+              '追踪竞品在 Reddit 上的动���和策略，发现增长机��。',
               'Track competitor activity and strategies on Reddit to discover growth opportunities.'
             )}</p>
           </div>
           <div className="sg-feature">
-            <h3>{t(lang, '品牌建设', 'Brand Building')}</h3>
+            <h3>{t(lang, '��牌建设', 'Brand Building')}</h3>
             <p>{t(lang,
-              '在目标 Subreddit 建立品牌声量，产出高质量 UGC 内容，让用户成为品牌传播者。',
+              '在目标 Subreddit 建立品牌声量，产���高质量 UGC 内容，让用户成为品牌���播者。',
               'Build brand presence in target Subreddits, produce high-quality UGC content, and turn users into brand advocates.'
             )}</p>
           </div>
@@ -133,18 +184,18 @@ export default function ServiceGuide() {
       <section>
         <h2>{t(lang, '服务链路', 'Service Pipeline')}</h2>
         <div className="sg-pipeline">
-          <div className="sg-pipeline-step"><span>1</span>{t(lang, '账号基础维护', 'Account Maintenance')}</div>
+          <div className="sg-pipeline-step"><span>1</span>{t(lang, '账号基础���护', 'Account Maintenance')}</div>
           <div className="sg-pipeline-arrow">&rarr;</div>
           <div className="sg-pipeline-step"><span>2</span>{t(lang, '调研目标社区与话题', 'Research Communities & Topics')}</div>
           <div className="sg-pipeline-arrow">&rarr;</div>
-          <div className="sg-pipeline-step"><span>3</span>{t(lang, '撰写推广评论+帖子', 'Write Comments & Posts')}</div>
+          <div className="sg-pipeline-step"><span>3</span>{t(lang, '撰���推广评论+帖子', 'Write Comments & Posts')}</div>
           <div className="sg-pipeline-arrow">&rarr;</div>
-          <div className="sg-pipeline-step"><span>4</span>{t(lang, '分析互动与线索', 'Analyze Engagement & Leads')}</div>
+          <div className="sg-pipeline-step"><span>4</span>{t(lang, '���析互动与线索', 'Analyze Engagement & Leads')}</div>
           <div className="sg-pipeline-arrow">&rarr;</div>
           <div className="sg-pipeline-step"><span>5</span>{t(lang, '策略迭代', 'Iterate Strategy')}</div>
         </div>
         <p>{t(lang,
-          '在具体合作中，会结合客户当下的运营重点和推广目标定制服务方案，持续协助梳理方向、识别问题、调整策略，并帮助搭建 OpenClaw 自动化工作流。',
+          '在具体合作中，会结合客户当下的运营重点和推广目标定制服务方案，持续协助梳理方���、识别问题、调整策略，并帮助搭建 OpenClaw 自动化工作流。',
           'In each engagement, we customize the service plan based on the client\'s current operational focus and growth goals, continuously helping to clarify direction, identify issues, adjust strategies, and build OpenClaw automation workflows.'
         )}</p>
       </section>
@@ -153,7 +204,7 @@ export default function ServiceGuide() {
       <section>
         <h2>{t(lang, '全链路执行体系', 'Full-Pipeline Execution System')}</h2>
         <p>{t(lang,
-          '基于 OpenClaw 的 AI Agent 自动化执行所有 Reddit 增长操作，同时人工执行高级操作：',
+          '基于 OpenClaw 的 AI Agent 自动化执行所有 Reddit 增长操作，同时人工执行高��操作：',
           'All Reddit growth operations are executed automatically via OpenClaw\'s AI Agent, with manual execution for advanced operations:'
         )}</p>
         <div className="sg-modules">
@@ -168,68 +219,139 @@ export default function ServiceGuide() {
 
       {/* Agent Workflow */}
       <section>
-        <h2>{t(lang, 'Agent 工作流程', 'Agent Workflow')}</h2>
+        <h2>{t(lang, 'Agent ��作流程', 'Agent Workflow')}</h2>
         <div className="sg-workflow-grid">
           <div className="sg-workflow-card">
-            <h3>{t(lang, '智能回帖 + 评论互动', 'Smart Commenting & Engagement')}</h3>
+            <h3>{t(lang, '智能回帖 + 评论互���', 'Smart Commenting & Engagement')}</h3>
             <ol>
               <li>{t(lang, 'Agent 自动扫描目标关键词相关讨论', 'Agent automatically scans discussions related to target keywords')}</li>
               <li>{t(lang, '分析帖子内容和社区氛围', 'Analyzes post content and community sentiment')}</li>
-              <li>{t(lang, '生成自然、有价值的回复', 'Generates natural, valuable replies')}</li>
+              <li>{t(lang, '生成自��、有价值的回复', 'Generates natural, valuable replies')}</li>
               <li>{t(lang, '在合适时机发布，自然引流', 'Publishes at optimal timing for organic traffic')}</li>
             </ol>
           </div>
           <div className="sg-workflow-card">
             <h3>{t(lang, '高质量自主帖子', 'High-Quality Original Posts')}</h3>
             <ol>
-              <li>{t(lang, '基于 Subreddit 分析，选择最佳话题', 'Select the best topics based on Subreddit analysis')}</li>
-              <li>{t(lang, '撰写符合社区调性的原创内容', 'Write original content matching community tone')}</li>
+              <li>{t(lang, '��于 Subreddit 分析，选择最佳话题', 'Select the best topics based on Subreddit analysis')}</li>
+              <li>{t(lang, '撰写符合社区调性��原创内容', 'Write original content matching community tone')}</li>
               <li>{t(lang, '选择最优发帖时间', 'Choose optimal posting time')}</li>
-              <li>{t(lang, '发布后持续监控互动数据', 'Continuously monitor engagement data after publishing')}</li>
+              <li>{t(lang, '发布后持��监控互动数据', 'Continuously monitor engagement data after publishing')}</li>
             </ol>
           </div>
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Service Guarantees */}
+      <section>
+        <h2>{t(lang, '服务保障', 'Service Guarantees')}</h2>
+        <div className="sg-guarantees">
+          <div className="sg-guarantee-item">
+            <strong>{t(lang, '10 天内容存活保障', '10-Day Content Survival')}</strong>
+            <p>{t(lang,
+              '所有发布的内容承诺在 Reddit 上保持可见至少 10 天。如在 10 天内被删除，我们将免费重新创建同等质量的替代内容。',
+              'All published content is guaranteed to remain visible on Reddit for at least 10 days. If deleted within 10 days, we will recreate equivalent quality content at no extra cost.'
+            )}</p>
+          </div>
+          <div className="sg-guarantee-item">
+            <strong>{t(lang, '内容准确性承诺', 'Content Accuracy Promise')}</strong>
+            <p>{t(lang,
+              '如内容存在事实性错误，我们将免费修正或重新创建。',
+              'If content contains factual errors, we will correct or recreate it at no charge.'
+            )}</p>
+          </div>
+          <div className="sg-guarantee-item">
+            <strong>{t(lang, '实时数据追踪', 'Real-Time Data Tracking')}</strong>
+            <p>{t(lang,
+              '提供 Dashboard 实时查看所有内容的发布状态、互动数据和效果表现，跨 Reddit、Google、AI 搜索多维度追踪。',
+              'Dashboard provides real-time visibility into all content publication status, engagement data, and performance — tracking across Reddit, Google, and AI search dimensions.'
+            )}</p>
+          </div>
+          <div className="sg-guarantee-item">
+            <strong>{t(lang, '未消耗退款', 'Unused Credit Refunds')}</strong>
+            <p>{t(lang,
+              '按需付费，内容发布成功才收费，未消耗部分支持按比例退款。',
+              'Pay as you go — you only pay for successfully published content. Unused credits are refunded proportionally.'
+            )}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
       <section>
         <h2>{t(lang, '客户评价', 'Client Testimonials')}</h2>
-        <blockquote className="sg-quote">
-          {t(lang,
-            '"我们尝试自己做 Reddit 发了好几个月，用了 Upvote 两周后，我们在 r/startups 的帖子就开始拿到 50+ 赞。光是发帖时间优化这一项，就值回 10 倍价格。"',
-            '"We tried doing Reddit ourselves for months. Within two weeks of using Upvote, our posts on r/startups started getting 50+ upvotes. The posting time optimization alone was worth 10x the price."'
-          )}
-        </blockquote>
+        <div className="sg-testimonials">
+          <blockquote className="sg-quote">
+            <p>{t(lang,
+              '"我们尝试自己做 Reddit 发了好几个月，用了 Upvote 两周后，我们在 r/startups 的帖子就开始拿到 50+ 赞。光是发帖时间优化这一项，就值回 10 倍价格。"',
+              '"We tried doing Reddit ourselves for months. Within two weeks of using Upvote, our posts on r/startups started getting 50+ upvotes. The posting time optimization alone was worth 10x the price."'
+            )}</p>
+            <cite>— {t(lang, 'SaaS 创始人', 'SaaS Founder')}</cite>
+          </blockquote>
+          <blockquote className="sg-quote">
+            <p>{t(lang,
+              '"上线 48 小时 Karma 就从 2 涨到了 220+，第一周评论就开始有自然互动了。之前找了两家服务商都踩坑封号，Upvote 是唯一让我账号安全活下来的。"',
+              '"Karma went from 2 to 220+ in 48 hours, and our comments started getting organic engagement in the first week. We got burned by two other providers before — Upvote is the only one that kept our account safe."'
+            )}</p>
+            <cite>— {t(lang, 'AI 工具出海团队', 'AI Tool Go-Global Team')}</cite>
+          </blockquote>
+          <blockquote className="sg-quote">
+            <p>{t(lang,
+              '"用了三个月之后，我们的产品开始出现在 ChatGPT 和 Perplexity 的推荐结果里。Reddit 上的内容直接带来了 AI 搜索可见度。"',
+              '"After three months, our product started appearing in ChatGPT and Perplexity recommendations. The Reddit content directly drove AI search visibility."'
+            )}</p>
+            <cite>— {t(lang, 'DTC 品牌营销负责人', 'DTC Brand Marketing Lead')}</cite>
+          </blockquote>
+        </div>
       </section>
 
       {/* Pricing */}
       <section>
         <h2>{t(lang, '定价', 'Pricing')}</h2>
-        <p>{t(lang,
-          '按需付费，内容发布成功才收费，未消耗部分支持退款。',
-          'Pay as you go — you only pay for successfully published content. Unused credits are refundable.'
-        )}</p>
         <div className="sg-pricing-grid">
           <div className="sg-pricing-card sg-pricing-highlight">
-            <div className="sg-pricing-badge">{t(lang, '内测价格', 'Beta')}</div>
+            <div className="sg-pricing-badge">{t(lang, '限时优惠', 'Launch Special')}</div>
             <div className="sg-pricing-amount">$99<span>/mo</span></div>
-            <p>{t(lang, '轻度用户', 'Light users')}</p>
-            <p className="sg-pricing-note">{t(lang, '有效期至 5.1', 'Valid until May 1')}</p>
+            <h4>{t(lang, '轻度用户', 'Starter')}</h4>
+            <ul className="sg-pricing-features">
+              <li>{t(lang, '20 条精准评论/月', '20 targeted comments/mo')}</li>
+              <li>{t(lang, 'Karma 基础增长', 'Basic Karma growth')}</li>
+              <li>{t(lang, '1 个目标 Subreddit', '1 target Subreddit')}</li>
+              <li>{t(lang, '月度数据报告', 'Monthly data report')}</li>
+            </ul>
+            <p className="sg-pricing-note">{t(lang, '限时优惠至 5.1', 'Limited offer until May 1')}</p>
           </div>
           <div className="sg-pricing-card">
             <div className="sg-pricing-badge">Professional</div>
             <div className="sg-pricing-amount">$299<span>/mo</span></div>
-            <p>{t(lang, '小型 SaaS 产品', 'Small SaaS products')}</p>
+            <h4>{t(lang, '小型 SaaS 产品', 'Growing SaaS')}</h4>
+            <ul className="sg-pricing-features">
+              <li>{t(lang, '60 条精准评论/月', '60 targeted comments/mo')}</li>
+              <li>{t(lang, '4 篇深度长文/月', '4 long-form posts/mo')}</li>
+              <li>{t(lang, 'Karma 加速增长', 'Accelerated Karma growth')}</li>
+              <li>{t(lang, '3 个目标 Subreddit', '3 target Subreddits')}</li>
+              <li>{t(lang, '内容发布前审核', 'Pre-publishing content review')}</li>
+              <li>{t(lang, '双周策略会议', 'Bi-weekly strategy sync')}</li>
+            </ul>
           </div>
           <div className="sg-pricing-card">
             <div className="sg-pricing-badge">Enterprise</div>
             <div className="sg-pricing-amount">$499<span>/mo</span></div>
-            <p>{t(lang, '硬件产品或大型 SaaS 产品', 'Hardware or large SaaS products')}</p>
+            <h4>{t(lang, '规模化增长', 'Scale')}</h4>
+            <ul className="sg-pricing-features">
+              <li>{t(lang, '100+ 条精准评论/月', '100+ targeted comments/mo')}</li>
+              <li>{t(lang, '8 篇深度长文/月', '8 long-form posts/mo')}</li>
+              <li>{t(lang, '品牌 Subreddit 创建与运营', 'Brand Subreddit creation & management')}</li>
+              <li>{t(lang, '5+ 个目标 Subreddit', '5+ target Subreddits')}</li>
+              <li>{t(lang, '潜在客户追踪与通知', 'Lead tracking & notifications')}</li>
+              <li>{t(lang, '竞品监控报告', 'Competitor monitoring reports')}</li>
+              <li>{t(lang, '每周策略会议 + Dashboard', 'Weekly strategy sync + Dashboard')}</li>
+            </ul>
           </div>
         </div>
         <p className="sg-pricing-future">{t(lang,
-          '后续可支持 X / Instagram / TikTok 增长。',
-          'Future support for X / Instagram / TikTok growth.'
+          '后续可支持 X / Instagram / TikTok 增长。多月合作（3 个月+）享额外折��。',
+          'Future support for X / Instagram / TikTok growth. Multi-month partnerships (3+ months) receive additional discounts.'
         )}</p>
       </section>
 
@@ -237,9 +359,9 @@ export default function ServiceGuide() {
       <section>
         <h2>{t(lang, '快速开始', 'Getting Started')}</h2>
         <ol className="sg-steps">
-          <li>{t(lang, '访问官网：', 'Visit our website: ')}<a href="https://reddit-growth-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">reddit-growth-orpin.vercel.app</a></li>
+          <li>{t(lang, '访问官��：', 'Visit our website: ')}<a href="https://reddit-growth-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">reddit-growth-orpin.vercel.app</a></li>
           <li>{t(lang, '点击「免费开始」注册账号', 'Click "Get Started Free" to create your account')}</li>
-          <li>{t(lang, '通过下方联系方式提交你的品牌和目标 Subreddit 信息', 'Submit your brand and target Subreddit information via the contact methods below')}</li>
+          <li>{t(lang, '通过下方联系方式���交你的品牌和目标 Subreddit 信息', 'Submit your brand and target Subreddit information via the contact methods below')}</li>
           <li>{t(lang, 'Agent 自动开始执行增长策略', 'Agent automatically begins executing your growth strategy')}</li>
         </ol>
       </section>
