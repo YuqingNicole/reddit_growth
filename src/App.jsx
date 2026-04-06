@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Changelog from './pages/Changelog'
 import Status from './pages/Status'
+import ServiceGuide from './pages/ServiceGuide'
 
 function Home() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/changelog" element={<Changelog />} />
         <Route path="/status" element={<Status />} />
+        <Route path="/service-guide" element={<ServiceGuide />} />
       </Routes>
       <Footer />
     </>

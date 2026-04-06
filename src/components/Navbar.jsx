@@ -12,6 +12,7 @@ export default function Navbar() {
         <a href="#services">{t(lang, '服务', 'Services')}</a>
         <a href="#demo">Demo</a>
         <Link to="/changelog">{t(lang, '更新日志', 'Changelog')}</Link>
+        <Link to="/service-guide">{t(lang, '服务指南', 'Guide')}</Link>
       </div>
       <div className="nav-right">
         <button className="btn-lang" onClick={toggle}>
