@@ -335,8 +335,11 @@ export default function ServiceGuide() {
             <a href="mailto:nicole@daobang.tech">nicole@daobang.tech</a>
           </div>
           <div className="sg-contact-item">
-            <strong>{t(lang, '微信', 'WeChat')}</strong>
-            <span>c1426217526</span>
+            <strong>{t(lang, '微信', 'Telegram')}</strong>
+            {lang === 'zh'
+              ? <span>c1426217526</span>
+              : <a href="https://t.me/Nicoleqc" target="_blank" rel="noopener noreferrer">@Nicoleqc</a>
+            }
           </div>
         </div>
       </section>
