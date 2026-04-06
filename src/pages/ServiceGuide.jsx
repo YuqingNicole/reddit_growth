@@ -60,20 +60,20 @@ const redditStats = [
 ]
 
 const features = [
-  { icon: '\uD83D\uDCAC', zh: '智能回帖', en: 'Smart Commenting', descZh: '根据关键词，AI 自动发现与你产品相关的讨论帖，生成有价值的回复，自然引导流量。自动检查 Subreddit 规则合规性，规避封号风险。', descEn: 'AI automatically discovers discussion threads related to your product based on keywords, generates valuable replies, and naturally drives traffic. It automatically checks Subreddit rule compliance to minimize ban risks.' },
-  { icon: '\uD83D\uDD0D', zh: 'Subreddit 发现与分析', en: 'Subreddit Discovery & Analysis', descZh: '发帖之前，先摸透每个社区。AI 自动评估每个 Subreddit 的营销适配度、用户构成、活跃规律和内容偏好，提供策略建议和切入点推荐。', descEn: "Before posting, get deep insights into each community. AI automatically evaluates each Subreddit's marketing fit, user demographics, activity patterns, and content preferences." },
-  { icon: '\uD83C\uDFAF', zh: '潜在客户追踪', en: 'Lead Tracking', descZh: '通过关键词和 AI 分析，在帖子和评论中追踪高意向潜在客户，实时通知，精准触达目标用户。', descEn: 'Through keyword and AI analysis, track high-intent leads in posts and comments with real-time notifications for precise targeting.' },
-  { icon: '\u26A1', zh: 'Karma 增长服务', en: 'Karma Growth', descZh: '从 0 开始帮你的 Reddit 账号积累 Karma 和权威性，快速达到发帖门槛。实测 Karma 从 2 增长到 220+，仅用 48 小时。', descEn: "Build your account's Karma and authority from scratch. In practice, Karma grew from 2 to 220+ in just 48 hours." },
-  { icon: '\uD83D\uDCC8', zh: '内容策略', en: 'Content Strategy', descZh: '根据数据分析，制定最优发帖时间、内容类型和话题方向。', descEn: 'Develop optimal posting times, content types, and topic directions based on data analysis.' },
-  { icon: '\uD83D\uDC41', zh: '竞品监控', en: 'Competitor Monitoring', descZh: '追踪竞品在 Reddit 上的动态和策略，发现增长机会。', descEn: 'Track competitor activity and strategies on Reddit to discover growth opportunities.' },
-  { icon: '\uD83C\uDFF7\uFE0F', zh: '品牌建设', en: 'Brand Building', descZh: '在目标 Subreddit 建立品牌声量，产出高质量 UGC 内容，让用户成为品牌传播者。', descEn: 'Build brand presence in target Subreddits, produce high-quality UGC content, and turn users into brand advocates.' },
+  { zh: '智能回帖', en: 'Smart Commenting', descZh: '根据关键词，AI 自动发现与你产品相关的讨论帖，生成有价值的回复，自然引导流量。自动检查 Subreddit 规则合规性，规避封号风险。', descEn: 'AI automatically discovers discussion threads related to your product based on keywords, generates valuable replies, and naturally drives traffic. It automatically checks Subreddit rule compliance to minimize ban risks.' },
+  { zh: 'Subreddit 发现与分析', en: 'Subreddit Discovery & Analysis', descZh: '发帖之前，先摸透每个社区。AI 自动评估每个 Subreddit 的营销适配度、用户构成、活跃规律和内容偏好，提供策略建议和切入点推荐。', descEn: "Before posting, get deep insights into each community. AI automatically evaluates each Subreddit's marketing fit, user demographics, activity patterns, and content preferences." },
+  { zh: '潜在客户追踪', en: 'Lead Tracking', descZh: '通过关键词和 AI 分析，在帖子和评论中追踪高意向潜在客户，实时通知，精准触达目标用户。', descEn: 'Through keyword and AI analysis, track high-intent leads in posts and comments with real-time notifications for precise targeting.' },
+  { zh: 'Karma 增长服务', en: 'Karma Growth', descZh: '从 0 开始帮你的 Reddit 账号积累 Karma 和权威性，快速达到发帖门槛。实测 Karma 从 2 增长到 220+，仅用 48 小时。', descEn: "Build your account's Karma and authority from scratch. In practice, Karma grew from 2 to 220+ in just 48 hours." },
+  { zh: '内容策略', en: 'Content Strategy', descZh: '根据数据分析，制定最优发帖时间、内容类型和话题方向。', descEn: 'Develop optimal posting times, content types, and topic directions based on data analysis.' },
+  { zh: '竞品监控', en: 'Competitor Monitoring', descZh: '追踪竞品在 Reddit 上的动态和策略，发现增长机会。', descEn: 'Track competitor activity and strategies on Reddit to discover growth opportunities.' },
+  { zh: '品牌建设', en: 'Brand Building', descZh: '在目标 Subreddit 建立品牌声量，产出高质量 UGC 内容，让用户成为品牌传播者。', descEn: 'Build brand presence in target Subreddits, produce high-quality UGC content, and turn users into brand advocates.' },
 ]
 
 const guarantees = [
-  { icon: '\uD83D\uDEE1\uFE0F', zh: '10 天内容存活保障', en: '10-Day Content Survival', descZh: '所有发布的内容承诺在 Reddit 上保持可见至少 10 天。如在 10 天内被删除，我们将免费重新创建同等质量的替代内容。', descEn: 'All published content is guaranteed to remain visible on Reddit for at least 10 days. If deleted within 10 days, we will recreate equivalent quality content at no extra cost.' },
-  { icon: '\u2705', zh: '内容准确性承诺', en: 'Content Accuracy Promise', descZh: '如内容存在事实性错误，我们将免费修正或重新创建。', descEn: 'If content contains factual errors, we will correct or recreate it at no charge.' },
-  { icon: '\uD83D\uDCCA', zh: '实时数据追踪', en: 'Real-Time Data Tracking', descZh: '提供 Dashboard 实时查看所有内容的发布状态、互动数据和效果表现，跨 Reddit、Google、AI 搜索多维度追踪。', descEn: 'Dashboard provides real-time visibility into all content status, engagement data, and performance across Reddit, Google, and AI search.' },
-  { icon: '\uD83D\uDCB0', zh: '未消耗退款', en: 'Unused Credit Refunds', descZh: '按需付费，内容发布成功才收费，未消耗部分支持按比例退款。', descEn: 'Pay as you go. You only pay for successfully published content. Unused credits are refunded proportionally.' },
+  { zh: '10 天内容存活保障', en: '10-Day Content Survival', descZh: '所有发布的内容承诺在 Reddit 上保持可见至少 10 天。如在 10 天内被删除，我们将免费重新创建同等质量的替代内容。', descEn: 'All published content is guaranteed to remain visible on Reddit for at least 10 days. If deleted within 10 days, we will recreate equivalent quality content at no extra cost.' },
+  { zh: '内容准确性承诺', en: 'Content Accuracy Promise', descZh: '如内容存在事实性错误，我们将免费修正或重新创建。', descEn: 'If content contains factual errors, we will correct or recreate it at no charge.' },
+  { zh: '实时数据追踪', en: 'Real-Time Data Tracking', descZh: '提供 Dashboard 实时查看所有内容的发布状态、互动数据和效果表现，跨 Reddit、Google、AI 搜索多维度追踪。', descEn: 'Dashboard provides real-time visibility into all content status, engagement data, and performance across Reddit, Google, and AI search.' },
+  { zh: '未消耗退款', en: 'Unused Credit Refunds', descZh: '按需付费，内容发布成功才收费，未消耗部分支持按比例退款。', descEn: 'Pay as you go. You only pay for successfully published content. Unused credits are refunded proportionally.' },
 ]
 
 export default function ServiceGuide() {
@@ -149,7 +149,6 @@ export default function ServiceGuide() {
         <div className="sg-features">
           {features.map((f, i) => (
             <div className="sg-feature" key={i}>
-              <div className="sg-feature-icon">{f.icon}</div>
               <h3>{t(lang, f.zh, f.en)}</h3>
               <p>{t(lang, f.descZh, f.descEn)}</p>
             </div>
@@ -225,7 +224,6 @@ export default function ServiceGuide() {
         <div className="sg-guarantees">
           {guarantees.map((g, i) => (
             <div className="sg-guarantee-item" key={i}>
-              <div className="sg-guarantee-icon">{g.icon}</div>
               <strong>{t(lang, g.zh, g.en)}</strong>
               <p>{t(lang, g.descZh, g.descEn)}</p>
             </div>

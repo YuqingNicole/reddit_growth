@@ -78,11 +78,6 @@
   padding: 20px;
 }
 
-.sg-feature-icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
 .sg-feature h3 {
   font-family: 'Syne', sans-serif;
   font-size: 16px;
@@ -207,11 +202,6 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
-}
-
-.sg-guarantee-icon {
-  font-size: 24px;
-  margin-bottom: 8px;
 }
 
 .sg-guarantee-item strong {
