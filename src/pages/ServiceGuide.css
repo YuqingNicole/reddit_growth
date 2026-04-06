@@ -1,7 +1,7 @@
-/* Stats Grid */
+/* Stats Grid - Big Numbers */
 .sg-stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-top: 16px;
 }
@@ -9,21 +9,37 @@
 .sg-stat-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
 }
 
-.sg-stat-card p {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 0;
-  color: inherit;
+.sg-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.sg-stat-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sg-stat-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
 }
 
 /* AI Benefits */
 .sg-ai-benefits {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-top: 16px;
 }
@@ -38,7 +54,7 @@
 .sg-ai-item strong {
   display: block;
   font-family: 'Syne', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 
@@ -47,7 +63,7 @@
   margin-bottom: 0;
 }
 
-/* Features Grid */
+/* Features Grid - with icons */
 .sg-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -60,6 +76,11 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
+}
+
+.sg-feature-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .sg-feature h3 {
@@ -116,8 +137,8 @@
 
 /* Execution Modules */
 .sg-modules {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-top: 16px;
 }
@@ -173,7 +194,7 @@
   line-height: 1.8;
 }
 
-/* Guarantees */
+/* Guarantees - with icons */
 .sg-guarantees {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -186,6 +207,11 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
+}
+
+.sg-guarantee-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .sg-guarantee-item strong {
@@ -230,7 +256,7 @@
   color: inherit;
 }
 
-/* Pricing */
+/* Pricing - with divider and CTA */
 .sg-pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -244,6 +270,8 @@
   border-radius: 12px;
   padding: 28px 24px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .sg-pricing-card.sg-pricing-highlight {
@@ -276,14 +304,21 @@
 .sg-pricing-card h4 {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   color: var(--muted);
+}
+
+.sg-pricing-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
 }
 
 .sg-pricing-features {
   list-style: none;
   padding: 0;
   text-align: left;
+  flex: 1;
 }
 
 .sg-pricing-features li {
@@ -302,11 +337,29 @@
   font-weight: 700;
 }
 
+.sg-pricing-cta {
+  display: block;
+  margin-top: 16px;
+  padding: 10px 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.sg-pricing-cta:hover {
+  opacity: 0.85;
+}
+
 .sg-pricing-note {
   font-size: 12px !important;
   color: var(--accent) !important;
   font-weight: 600;
-  margin-top: 12px !important;
+  margin-top: 8px !important;
 }
 
 .sg-pricing-future {
@@ -361,11 +414,15 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .sg-stats-grid,
+  .sg-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .sg-ai-benefits,
   .sg-features,
   .sg-workflow-grid,
-  .sg-guarantees {
+  .sg-guarantees,
+  .sg-modules {
     grid-template-columns: 1fr;
   }
 
